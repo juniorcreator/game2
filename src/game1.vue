@@ -85,7 +85,7 @@ methods: {
 		align-items: center;
 		min-height: 235px;
 		flex-wrap: wrap;
-		margin-top: 57px;
+		margin-top: 10px;
       .cards{
 		width: 65px;
 		height: 65px;

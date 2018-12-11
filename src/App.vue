@@ -181,7 +181,7 @@ import vinner from './Vinner.vue'
 <style lang="scss" scoped> 
   .maiwrapper {
     position: relative;
-    max-width: 750px;
+    max-width: 520px;
     height: 100%;
     max-height: 500px;
     margin: 0 auto;

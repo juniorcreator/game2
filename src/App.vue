@@ -84,8 +84,13 @@ import vinner from './Vinner.vue'
         isPlayAgaing: false,
       }
     },
-    created () {
+    beforeMount () {
     },
+    created () {
+      this.resortArray(this.cards);
+    },
+    beforeDestroy() {
+  },
     components:{
       appTimemoves: timemoves,
       appStartgame: startgame,
@@ -94,8 +99,13 @@ import vinner from './Vinner.vue'
       appVinner: vinner,
     },
     methods: {
-      resortArray () {
-
+      resortArray (array) {
+        for (var i = array.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+        }
       },
       startGame (value) {
           this.startgame[0].ishow = false;
@@ -123,9 +133,12 @@ import vinner from './Vinner.vue'
 
       },
       fPlayAgain () {
-        this.isPlayAgaing = false;
-        this.startgame[0].ishow = false;
-        clearInterval(this.interval);
+        this.startGame();
+        // this.interval = setInterval(() => {
+        //   this.timermoves.counter +=1;
+        // },1000);
+        // this.isPlayAgaing = false;
+        // this.startgame[0].ishow = false;
         this.timermoves.counter = 0;
         this.timermoves.moves = 0;
         this.isPlayAgaing = false;
@@ -156,7 +169,12 @@ import vinner from './Vinner.vue'
         // this.fresetGame();
 
       },
-    }
+    },
+    mounted () {
+      // this.resortArray(this.cards);
+      // return
+      // console.log('mounted')
+    },
   }
 </script>
 

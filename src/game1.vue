@@ -17,8 +17,14 @@
 </template>
 
 <script>
+import {eventEmitter} from './main.js';
 export default {
 props: ['cards','gameLevel'],
+created() {
+	eventEmitter.$on('openerCardToZero', () => {
+				this.allOpened = 0;
+			});
+},
 data () {
 	return {
 		arr: [],
@@ -73,6 +79,9 @@ methods: {
 	fCloseCards () {
 
 	},
+	clearAllOpened() {
+		this.allOpened = 0;
+	}
 }
 }
 </script>

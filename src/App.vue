@@ -63,18 +63,18 @@ import vinner from './Vinner.vue'
           {'type': 'img14', src: 'src/assets/images/level1/image14.jpg', isactive: false, isDisabled: false, isMatched: false},
           {'type': 'img16', src: 'src/assets/images/level1/image16.jpg', isactive: false, isDisabled: false, isMatched: false},
           {'type': 'img16', src: 'src/assets/images/level1/image16.jpg', isactive: false, isDisabled: false, isMatched: false},
-          // {'type': 'img22', src: 'src/assets/images/level1/image22.jpg', isactive: false, isDisabled: false, isMatched: false},
-          // {'type': 'img22', src: 'src/assets/images/level1/image22.jpg', isactive: false, isDisabled: false, isMatched: false},
-          // {'type': 'img23', src: 'src/assets/images/level1/image23.jpg', isactive: false, isDisabled: false, isMatched: false},
-          // {'type': 'img23', src: 'src/assets/images/level1/image23.jpg', isactive: false, isDisabled: false, isMatched: false},
-          // {'type': 'img31', src: 'src/assets/images/level1/image31.jpg', isactive: false, isDisabled: false, isMatched: false},
-          // {'type': 'img31', src: 'src/assets/images/level1/image31.jpg', isactive: false, isDisabled: false, isMatched: false},
-          // {'type': 'img49', src: 'src/assets/images/level1/image49.jpg', isactive: false, isDisabled: false, isMatched: false},
-          // {'type': 'img49', src: 'src/assets/images/level1/image49.jpg', isactive: false, isDisabled: false, isMatched: false},
-          // {'type': 'img37', src: 'src/assets/images/level1/image37.jpg', isactive: false, isDisabled: false, isMatched: false},
-          // {'type': 'img37', src: 'src/assets/images/level1/image37.jpg', isactive: false, isDisabled: false, isMatched: false},
-          // {'type': 'img12', src: 'src/assets/images/level1/image12.jpg', isactive: false, isDisabled: false, isMatched: false},
-          // {'type': 'img12', src: 'src/assets/images/level1/image12.jpg', isactive: false, isDisabled: false, isMatched: false},
+          {'type': 'img22', src: 'src/assets/images/level1/image22.jpg', isactive: false, isDisabled: false, isMatched: false},
+          {'type': 'img22', src: 'src/assets/images/level1/image22.jpg', isactive: false, isDisabled: false, isMatched: false},
+          {'type': 'img23', src: 'src/assets/images/level1/image23.jpg', isactive: false, isDisabled: false, isMatched: false},
+          {'type': 'img23', src: 'src/assets/images/level1/image23.jpg', isactive: false, isDisabled: false, isMatched: false},
+          {'type': 'img31', src: 'src/assets/images/level1/image31.jpg', isactive: false, isDisabled: false, isMatched: false},
+          {'type': 'img31', src: 'src/assets/images/level1/image31.jpg', isactive: false, isDisabled: false, isMatched: false},
+          {'type': 'img49', src: 'src/assets/images/level1/image49.jpg', isactive: false, isDisabled: false, isMatched: false},
+          {'type': 'img49', src: 'src/assets/images/level1/image49.jpg', isactive: false, isDisabled: false, isMatched: false},
+          {'type': 'img37', src: 'src/assets/images/level1/image37.jpg', isactive: false, isDisabled: false, isMatched: false},
+          {'type': 'img37', src: 'src/assets/images/level1/image37.jpg', isactive: false, isDisabled: false, isMatched: false},
+          {'type': 'img12', src: 'src/assets/images/level1/image12.jpg', isactive: false, isDisabled: false, isMatched: false},
+          {'type': 'img12', src: 'src/assets/images/level1/image12.jpg', isactive: false, isDisabled: false, isMatched: false},
           // {'type': 'img44', src: 'src/assets/images/level1/image44.jpg', isactive: false, isDisabled: false, isMatched: false},
           // {'type': 'img44', src: 'src/assets/images/level1/image44.jpg', isactive: false, isDisabled: false, isMatched: false},
         ],
@@ -184,7 +184,6 @@ import vinner from './Vinner.vue'
     position: relative;
     max-width: 520px;
     height: 100%;
-    max-height: 500px;
     margin: 0 auto;
     padding: 0 15px;
     h1 {
@@ -193,9 +192,16 @@ import vinner from './Vinner.vue'
       margin: 5px 0;
     }
     .resetGame {
+      z-index: 9;
       position: absolute;
-      bottom: -21px;
-      left: 0;
+      bottom: 10px;
+      left: calc(50% - 45px);
+    }
+  }
+  @media (max-width: 600px) {
+    .maiwrapper h1 {
+      font-size: 35px;
+      margin: 2px 0;
     }
   }
 </style>

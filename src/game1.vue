@@ -132,4 +132,21 @@ methods: {
           }
       }
     }
+  @media (max-width: 600px) {
+    .game {
+      /*justify-content: space-between;*/
+      .cards {
+        margin: 3px 5px;
+        position: relative;
+        padding-bottom: 20%;
+        width: calc((100% - 10px) / 5);
+        height: auto;
+        img {
+          position: absolute;
+          left: 0;
+          top: 0;
+        }
+      }
+    }
+  }
 </style>

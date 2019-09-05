@@ -203,5 +203,15 @@ import vinner from './Vinner.vue'
       font-size: 35px;
       margin: 2px 0;
     }
+    .maiwrapper {
+      .resetGame {
+        z-index: 9;
+        position: absolute;
+        left: -33px;
+        bottom: auto;
+        top: calc(50% - 45px);
+        transform: rotate(90deg);
+      }
+    }
   }
 </style>

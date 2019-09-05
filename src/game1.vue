@@ -138,7 +138,7 @@ methods: {
       .cards {
         margin: 3px 5px;
         position: relative;
-        padding-bottom: 20%;
+        padding-bottom: 18%;
         width: calc((100% - 10px) / 5);
         height: auto;
         img {
